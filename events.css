@@ -1,0 +1,169 @@
+.page3 {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #ffffff;
+            min-height: 100vh;  /* garante pelo menos a altura da tela */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container3 {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px; /* apenas se quiser espaço lateral */
+            flex: 1; /* faz crescer para preencher o espaço */
+        }
+
+        .header3 {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header3 h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .header3 p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #b8b8d1;
+            font-weight: 300;
+        }
+
+        .toggle-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .toggle-btn {
+            background: #f59e0b;
+            color: #1a1a2e;
+            border: none;
+            padding: 12px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .event-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .event-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .event-content {
+            padding: 28px;
+        }
+
+        .event-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .event-date {
+            color: #f59e0b;
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .event-description {
+            color: #d1d5db;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .event-link {
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .event-link:hover {
+            color: #fbbf24;
+            border-bottom-color: #fbbf24;
+            transform: translateX(4px);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .empty-icon {
+            font-size: 120px;
+            margin-bottom: 24px;
+            opacity: 0.6;
+        }
+
+        .empty-state h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            color: #e5e7eb;
+        }
+
+        .empty-state p {
+            font-size: 1.125rem;
+            color: #9ca3af;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page3 {
+                padding: 40px 16px;
+            }
+
+            .event-content {
+                padding: 20px;
+            }
+        }

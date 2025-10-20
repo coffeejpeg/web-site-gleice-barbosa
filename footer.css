@@ -1,0 +1,137 @@
+.contact-section {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.contact-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0;
+}
+
+.contact-arrow {
+  width: 60px;
+  height: 60px;
+  background-color: #eab308;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact-arrow:hover {
+  background-color: #ca8a04;
+  transform: scale(1.1);
+}
+
+.contact-arrow svg {
+  width: 24px;
+  height: 24px;
+  color: #1f2937;
+}
+
+/* Footer */
+footer {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  margin-bottom: 1.5rem;
+  margin-top: 50%;
+  font-weight: 600;
+}
+
+.footer-brand {
+  font-size: 1.5rem;
+  color: #f8fafc;
+  line-height: 1.3;
+}
+
+.footer-column h4 {
+  font-size: 1.125rem;
+  color: #f8fafc;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: #eab308;
+}
+
+.social-link {
+  position: relative;
+}
+
+.footer-copyright {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #334155;
+}
+
+.footer-copyright p {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.footer-copyright strong {
+  color: #f8fafc;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  top: 0;
+  padding-top: 1.5rem;
+  height: 50px;
+  border-top: 1px solid #334155;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.875rem;
+  text-align: center;
+  top: 0;
+  margin-top: -0.2%;
+  justify-content: center;
+  color: #64748b;
+}

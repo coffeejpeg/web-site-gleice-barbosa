@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximos Eventos e Palestras</title>
+    <style>
+
+        html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+        .page3 {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #ffffff;
+            min-height: 100vh;  /* garante pelo menos a altura da tela */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container3 {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px; /* apenas se quiser espaço lateral */
+            flex: 1; /* faz crescer para preencher o espaço */
+        }
+
+        .header3 {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header3 h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .header3 p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #b8b8d1;
+            font-weight: 300;
+        }
+
+        .toggle-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .toggle-btn {
+            background: #f59e0b;
+            color: #1a1a2e;
+            border: none;
+            padding: 12px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .event-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .event-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .event-content {
+            padding: 28px;
+        }
+
+        .event-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .event-date {
+            color: #f59e0b;
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .event-description {
+            color: #d1d5db;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .event-link {
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .event-link:hover {
+            color: #fbbf24;
+            border-bottom-color: #fbbf24;
+            transform: translateX(4px);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .empty-icon {
+            font-size: 120px;
+            margin-bottom: 24px;
+            opacity: 0.6;
+        }
+
+        .empty-state h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            color: #e5e7eb;
+        }
+
+        .empty-state p {
+            font-size: 1.125rem;
+            color: #9ca3af;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                padding: 40px 16px;
+            }
+
+            .event-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page3">
+    <div class="container3">
+        <div class="header3">
+            <h1>Próximos eventos e palestras</h1>
+            <p>Aqui você pode encontrar informações sobre os próximos eventos e palestras.</p>
+        </div>
+
+        <div class="empty-state">
+            <div class="empty-icon">📅</div>
+            <h2>Nenhum evento disponível</h2>
+            <p>No momento não há eventos programados. Fique atento às nossas redes sociais para não perder as próximas palestras e apresentações!</p>
+        </div>
+
+        <!-- Cards dos eventos -->
+        <!-- <div class="events-grid" id="eventsGrid">
+            <div class="event-card">
+                <img src="https://media.discordapp.net/attachments/893555115611553862/1423820801341394955/image_1.png?ex=68e1b3f4&is=68e06274&hm=2dfe210f9f7c91091bb230a9e3558add60c04b76042654080c6c984c5a94d45b&=&format=webp&quality=lossless&height=280&width=400" alt="Evento 1" class="event-image">
+                <div class="event-content">
+                    <h2 class="event-title">Apresentação de Modelo Empresarial de Comercio</h2>
+                    <div class="event-date">00/00/0000</div>
+                    <p class="event-description">Descrição</p>
+                    <a href="#" class="event-link">Saiba Mais</a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="https://media.discordapp.net/attachments/893555115611553862/1423821128694239463/imageapre.png?ex=68e1b442&is=68e062c2&hm=b8b8ce1dbdb4dc8413b581322f8f54e09edf268030440db22c7ac9673d5d549a&=&format=webp&quality=lossless&height=280&width=400" alt="Evento 2" class="event-image">
+                <div class="event-content">
+                    <h2 class="event-title">Apresentação de Modelo Empresarial de Comercio</h2>
+                    <div class="event-date">00/00/0000</div>
+                    <p class="event-description">Descrição</p>
+                    <a href="#" class="event-link">Saiba Mais</a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="https://media.discordapp.net/attachments/893555115611553862/1423822287685287936/Rectangle_11.png?ex=68e1b556&is=68e063d6&hm=2191b03dca8d0af5d24314eb0efc9726d00b2de537b44136d43d71002943d839&=&format=webp&quality=lossless&height=280&width=400" alt="Evento 3" class="event-image">
+                <div class="event-content">
+                    <h2 class="event-title">Apresentação de Modelo Empresarial de Comercio</h2>
+                    <div class="event-date">00/00/0000</div>
+                    <p class="event-description">Descrição</p>
+                    <a href="#" class="event-link">Saiba Mais</a>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</body>
+</html>
