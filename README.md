@@ -95,7 +95,7 @@ O site é um site informativo sobre o trabalho e informações profissionais sob
 
 **Desenvolvido por: Gabriel Víctor & Thiago R.**
 
-![Gleice Barbosa Logo](image/logo.png)
+<img src="image/logo.png" style="width: 30%;" alt="logo">
 
 **© 2023 - 2025 Gleice Barbosa. Todos os direitos reservados.**
 
