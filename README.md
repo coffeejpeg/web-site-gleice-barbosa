@@ -2,7 +2,7 @@
 
 Um site de portfólio moderno e responsivo para uma gestora de empresas chamada Gleice Barbosa, criado com HTML5, CSS3 e JavaScript vanilla.
 
-<div class="lg" style="width: 60px;"> <img src="image/logo.png" alt="logo"></div>
+<img src="image/logo.png" style="width: 60px;" alt="logo">
 
 ## Visão Geral
 
